@@ -3,7 +3,7 @@
 
 FROM ubuntu
 MAINTAINER sekhar1996
-RUN apt-get -y update && apt-get -y upgrade
+#RUN apt-get -y update && apt-get -y upgrade
 RUN apt-get -y install openjdk-8-jdk wget
 RUN mkdir /opt/tomcat
 WORKDIR /opt/tomcat
