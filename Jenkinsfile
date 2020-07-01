@@ -1,4 +1,4 @@
-node('master){
+node('master'){
     stage('SCM Checkout'){
         git 'https://github.com/sekhar1926/exam'
    }
