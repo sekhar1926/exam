@@ -16,9 +16,9 @@ node{
             sh 'docker push sekhar1996/exam-1.0.0'
         }
         stage('Run container'){
-            def dockerRun= 'docker run -i -d -p 192.168.7.200:5000:8080 sekhar1996/exam-1.0.0'
+            def dockerRun= 'docker run -i -d -p 192.168.7.201:5000:8080 sekhar1996/exam-1.0.0'
             sshagent(['slave_pri_key']) {
-                sh "ssh -o StrictHostKeyChecking=no adisekhar@192.168.7.200 ${dockerRun}"
+                sh "ssh -o StrictHostKeyChecking=no adisekhar@192.168.7.201 ${dockerRun}"
        }     
    }
 }
